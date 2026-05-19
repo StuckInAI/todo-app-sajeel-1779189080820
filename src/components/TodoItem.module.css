@@ -1,0 +1,162 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3) var(--spacing-4);
+  transition: box-shadow 0.15s, opacity 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.item.completed {
+  opacity: 0.6;
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+  color: #fff;
+  padding: 0;
+}
+
+.checkbox.low {
+  border-color: var(--priority-low);
+}
+.checkbox.medium {
+  border-color: var(--priority-medium);
+}
+.checkbox.high {
+  border-color: var(--priority-high);
+}
+
+.checkbox.low.checked {
+  background: var(--priority-low);
+}
+.checkbox.medium.checked {
+  background: var(--priority-medium);
+}
+.checkbox.high.checked {
+  background: var(--priority-high);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  min-width: 0;
+}
+
+.text {
+  flex: 1;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  word-break: break-word;
+  min-width: 0;
+}
+
+.item.completed .text {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.editInput {
+  flex: 1;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  outline: none;
+  background: var(--color-bg);
+  min-width: 0;
+}
+
+.priorityBadge {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.priorityBadge.low {
+  background: color-mix(in srgb, var(--priority-low) 15%, transparent);
+  color: var(--priority-low);
+}
+.priorityBadge.medium {
+  background: color-mix(in srgb, var(--priority-medium) 15%, transparent);
+  color: var(--priority-medium);
+}
+.priorityBadge.high {
+  background: color-mix(in srgb, var(--priority-high) 15%, transparent);
+  color: var(--priority-high);
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.actionBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  background: transparent;
+}
+
+.editBtn {
+  color: var(--color-text-muted);
+}
+.editBtn:hover {
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+}
+
+.deleteBtn {
+  color: var(--color-text-muted);
+}
+.deleteBtn:hover {
+  background: color-mix(in srgb, var(--color-danger) 12%, transparent);
+  color: var(--color-danger);
+}
+
+.saveBtn {
+  color: var(--color-text-muted);
+}
+.saveBtn:hover {
+  background: color-mix(in srgb, var(--priority-low) 15%, transparent);
+  color: var(--priority-low);
+}
+
+.cancelBtn {
+  color: var(--color-text-muted);
+}
+.cancelBtn:hover {
+  background: color-mix(in srgb, var(--color-danger) 12%, transparent);
+  color: var(--color-danger);
+}

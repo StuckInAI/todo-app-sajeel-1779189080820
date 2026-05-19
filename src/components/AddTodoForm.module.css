@@ -1,0 +1,105 @@
+.form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  box-shadow: var(--shadow-sm);
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  outline: none;
+  transition: border-color 0.15s;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.priorityGroup {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.priorityBtn {
+  padding: 5px 14px;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--color-bg);
+  transition: all 0.15s;
+}
+
+.priorityBtn.low {
+  color: var(--priority-low);
+  border-color: var(--priority-low);
+}
+.priorityBtn.medium {
+  color: var(--priority-medium);
+  border-color: var(--priority-medium);
+}
+.priorityBtn.high {
+  color: var(--priority-high);
+  border-color: var(--priority-high);
+}
+
+.priorityBtn.low.active {
+  background: var(--priority-low);
+  color: #fff;
+}
+.priorityBtn.medium.active {
+  background: var(--priority-medium);
+  color: #fff;
+}
+.priorityBtn.high.active {
+  background: var(--priority-high);
+  color: #fff;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.addBtn:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.addBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
